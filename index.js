@@ -1,6 +1,18 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (i = 0; i < array.length; i++){
+    for(j = i + 1; j < array.length; j++) {
+      let addedValues = array[i] + array[j];
+      console.log(addedValues)
+
+      if (addedValues === target) {
+        return true
+      }
+    }
+  }
+  return false
 }
+
+hasTargetSum([22, 19, 4, 6, 30], 25);
 
 /* 
   Write the Big O time complexity of your function here
